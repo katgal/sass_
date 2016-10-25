@@ -1,0 +1,75 @@
+//zadania
+//zadanie 1 w variables
+@import "modules/variables";
+//Zadanie 2
+.menu1 {
+    display: none;
+}
+
+.menu {
+    list-style: none;
+
+    li {
+        display: inline-block;
+        padding: 5px;
+    }
+}
+@media screen and (max-width:650px) {
+    .menu {
+        display: none;
+
+        &.show {
+            display: block;
+
+            li {
+                display: block;
+            }
+        }
+    }
+
+    .menu1 {
+        display: block;
+    }
+}
+//Zadanie 3
+
+.p1 {
+
+    background: $color-alt;
+    width: 100vw;
+    height: 100vh;
+}
+
+.p2 {
+
+    background: $color-alt2;
+    width: 100vw;
+    height: 100vh;
+}
+//zadanie 4
+.p1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+//zad 5
+
+.p2 {
+    display: flex;
+    justify-content: flex-end;
+    // align-items: flex-end;
+    p {
+        width: 200px;
+    }
+}
+//zad 6
+.picContainer{
+    img{
+        @include pic(100%, 100%);
+    }
+}
+
+//zad 7
+.dialogBox {
+    @include dialog-box(red);
+}
